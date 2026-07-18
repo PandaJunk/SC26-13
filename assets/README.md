@@ -1,8 +1,8 @@
-# Processed Art Assets
+# 处理后的美术资源
 
-This directory contains the optimized, game-ready versions of the art assets.
+此目录存放经资源处理管线生成的优化后、可直接用于游戏的美术资源。
 
-- Source: `../raw-assets/`
-- Processing script: `pnpm assets:build` (runs `scripts/optimize-assets.ts`)
+- 原始素材：`../raw-assets/`
+- 构建命令：`pnpm assets:build`
 
-Currently empty — assets will be populated after running the processing pipeline.
+当前为空 —— 运行处理管线后资源将自动生成到此目录。

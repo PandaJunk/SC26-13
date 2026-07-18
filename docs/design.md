@@ -71,16 +71,17 @@ KeySoil 是一款跨平台桌面陪伴应用。用户在正常使用键盘工作
 准备好的素材为高清 PNG，需经后处理适配 Canvas 渲染：
 
 ```
-原始素材 (如 627×627 PNG)
+原始素材 (raw-assets/)
   │
-  ▼
-scripts/optimize-assets.ts  (使用 sharp)
-  ├── 按需缩放到目标尺寸 (如键帽 ~120×120px, 作物 ~64×64px)
-  ├── 可选：打包为精灵图集 (atlas.png + atlas.json)
-  └── 输出到 assets/ 目录
+  ▼ 阶段一：复制 (pnpm assets:copy)
+  │
+  ▼ 阶段二：优化 (pnpm assets:optimize，使用 sharp)
+  │   ├── 按需缩放到目标尺寸 (如键帽 ~120×120px, 作物 ~64×64px)
+  │   ├── 可选：打包为精灵图集 (atlas.png + atlas.json)
+  │   └── 输出到 assets/ 目录
 ```
 
-此脚本作为构建前置步骤，源资源放置在 `raw-assets/` 中，由 pnpm 脚本调用。
+源资源放置在 `raw-assets/` 中，由 pnpm 脚本调用。
 
 ---
 
