@@ -53,3 +53,12 @@ assets/.cache/
 # 临时文件
 tmp/
 temp/
+
+# Swift / SPM
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj
+Package.resolved
